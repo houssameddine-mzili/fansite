@@ -1,0 +1,618 @@
+@font-face {
+    font-family: 'NovaFlat';
+    src: url('fonts/NovaFlat-Regular.woff2') format('woff2'),
+         url('fonts/NovaFlat-Regular.woff') format('woff'),
+         url('fonts/NovaFlat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+body {
+    background-color: rgb(75, 74, 74);
+}
+
+/* Centered Navbar */
+.navbar-centered .nav-item {
+    margin-right: 25px; /* Adjust as needed for spacing */
+    margin-left: 25px;  /* Adjust as needed for spacing */
+}
+
+.navbar-centered .nav-item:last-child {
+    margin-right: 0;
+}
+
+.navbar-nav .nav-link {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Replace with your font */
+    font-size: 20px;
+    color: #fff; /* Replace with your color */
+}
+
+/* Hover effect */
+.navbar-centered .nav-link:hover {
+    color: #fff; /* Change as needed */
+    background-color: rgb(219, 80, 80); /* Change as needed */
+    border-radius: 5px; /* Optional for rounded corners */
+}
+
+.custom-logo-background {
+    background-color: transparent;
+    margin-left: -15px;
+    padding-left: 2px;
+    
+}
+
+.navbar {
+    z-index: 1030;
+    margin-right: 0;
+    margin-left: 0;
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.custom-navbar-shadow {
+    box-shadow: 0 12px 18px -1px rgba(255, 0, 0, 0.3), 
+                0 4px 8px -2px rgba(255, 0, 0, 0.2); /* Example of a custom shadow */
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+.hero-section {
+    background: url('images/LP_Band.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    height: 700px; /* Adjust based on your preference */
+    position: relative;
+    background-position: center 30%;
+  }
+  
+  /* Optional: Add an overlay for better text readability */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6); /* Black overlay with 50% opacity */
+    z-index: 1;
+  }
+  
+.display-4,
+.hero-section .container p {
+    position: relative;
+    z-index: 3; /* Text above the overlay and raindrops */
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.display-4 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 80px;
+    color: crimson;
+  }
+
+.hero-section .container p {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+  }
+
+.raindrops {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2; /* Above the image but below the text */
+  }
+  
+.raindrops .drop {
+    background: rgba(255, 255, 255, 0.6);
+    width: 1px;
+    height: 15px;
+    position: absolute;
+    bottom: 100%;
+    opacity: 0.6;
+  }
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+.about-band-section {
+    padding: 50px 0; /* Add top and bottom padding */
+  }
+  
+.about-band-section h2 {
+    margin-bottom: 50px; /* Space below the section heading */
+    font-family: 'NovaFlat';
+    color: #be3144;
+    font-size: 3rem;
+  }
+  
+.about-band-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color:  #f2f4f7; /* Light text for readability on dark backgrounds */
+    font-family: 'NovaFlat';
+  }
+  
+  /* Text alignment for smaller screens */
+@media (max-width: 991px) {
+.about-band-section .col-lg-6 {
+    text-align: center;
+    }
+  }
+
+  .about-band-section .col-lg-6 img {
+    margin-top: 100;
+    width: 100%;
+    height: auto;
+  }
+  
+  .about-band-section .row {
+    align-items: flex-start;
+  }
+
+  hr.rounded {
+  border-top: 8px solid gray;
+  border-radius: 5px;
+  width: 100%; /* Adjust the width as desired */
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 10px 14px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .stats-section .shadow {
+    background: #2a2a2a; /* Box background color */
+    border-radius: 10px; /* Rounded corners for the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  }
+
+  .stats-section {
+    padding: 40px 0; /* Adjust the padding as needed */
+  }
+  
+  .stats-section .row {
+    position: relative; /* Parent relative positioning for absolute children */
+  }
+  
+  .stats-section .col {
+    padding: 20px;
+    position: relative; /* Needed for pseudo-element positioning */
+  }
+  
+  /* Blurry divider */
+  .stats-section .col:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 2px; /* Line thickness */
+    height: 60%; /* Line height relative to its container */
+    background: linear-gradient(to bottom, #333 0%, #fff 50%, #333 100%);
+    transform: translateY(-50%); /* Center vertically */
+    filter: blur(1px); /* Subtle blur effect */
+    box-shadow: 3px 0 1px rgba(0, 0, 0, 0.2); /* Adding a shadow to the right of the line */
+  }
+
+  .stat-icon {
+    width: 80px; /* Adjust size as needed */
+    margin-bottom: 20px; /* Space between icon and number */
+  }
+  
+  .stats-section h3 {
+    font-size: 2rem; /* Adjust font size as needed */
+    color: lightskyblue; /* Color for the numbers */
+    margin-bottom: 5px; /* Space between number and text */
+  }
+  
+  .stats-section p {
+    font-size: 1rem; /* Adjust font size as needed */
+    color: lightgoldenrodyellow; /* Color for the text */
+  }
+  
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+.dark {
+	background: transparent;
+}
+
+a, a:hover {
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+}
+
+#pageHeaderTitle {
+	margin: 2rem 0;
+  font-family: 'NovaFlat';
+	text-align: center;
+	font-size: 3rem;
+  color: #be3144;
+}
+
+/* Cards */
+.postcard {
+    flex-wrap: wrap;
+    display: flex;
+    
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+    border-radius: 10px;
+    margin: 0 0 2rem 0;
+    overflow: hidden;
+    position: relative;
+    color: #ffffff;
+  
+      &.dark {
+          background-color: #18151f;
+      }
+      &.light {
+          background-color: #e1e5ea;
+      }
+      
+      .t-dark {
+          color: #18151f;
+      }
+      
+    a {
+      color: inherit;
+    }
+      
+      h1,	.h1 {
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+          line-height: 1.2;
+      }
+      
+      .small {
+          font-size: 80%;
+      }
+  
+    .postcard__title {
+      font-size: 1.75rem;
+    }
+  
+    .postcard__img {
+      max-height: 180px;
+      width: 100%;
+      object-fit: cover;
+      position: relative;
+    }
+  
+    .postcard__img_link {
+      display: contents;
+    }
+  
+    .postcard__bar {
+      width: 50px;
+      height: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      background-color: #ffffff;
+      
+    }
+  
+    .postcard__text {
+      padding: 1.5rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .postcard__preview-txt {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: justify;
+      height: 100%;
+    }
+}
+
+&:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(-70deg, #424242, transparent 50%);
+    opacity: 1;
+    border-radius: 10px;
+  }
+
+  
+
+@media screen and (min-width: 769px) {
+  .postcard {
+    flex-wrap: inherit;
+
+    .postcard__title {
+      font-size: 2rem;
+    }
+
+    .postcard__img {
+      max-width: 300px;
+      max-height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .postcard__text {
+      padding: 3rem;
+      width: 100%;
+    }
+
+    .media.postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+      background: #18151f;
+      top: -20%;
+      height: 130%;
+      width: 55px;
+    }
+
+    &:hover .postcard__img {
+      transform: scale(1.1);
+    }
+
+    &:nth-child(2n+1) {
+      flex-direction: row;
+    }
+
+    &:nth-child(2n+0) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-child(2n+1) .postcard__text::before {
+      left: -12px !important;
+      transform: rotate(4deg);
+    }
+
+    &:nth-child(2n+0) .postcard__text::before {
+      right: -12px !important;
+      transform: rotate(-4deg);
+    }
+  }
+}
+@media screen and (min-width: 1024px){
+		.postcard__text {
+      padding: 2rem 3.5rem;
+    }
+		
+		.postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+      
+      top: -20%;
+      height: 130%;
+      width: 55px;
+    }
+	
+  .postcard.dark {
+		.postcard__text:before {
+			background: #18151f;
+		}
+  }
+	.postcard.light {
+		.postcard__text:before {
+			background: #e1e5ea;
+		}
+  }
+
+
+@media screen and (min-width: 769px) {
+	.green::before {
+		background-image: linear-gradient(
+			-80deg,
+			green-rgb-015,
+			transparent 50%
+		);
+	}
+	.green:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			green-rgb-015,
+			transparent 50%
+		);
+	}
+
+	.blue::before {
+		background-image: linear-gradient(
+			-80deg,
+			blue-rgb-015,
+			transparent 50%
+		);
+	}
+	.blue:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, blue-rgb-015, transparent 50%);
+	}
+
+	.red::before {
+		background-image: linear-gradient(-80deg, red-rgb-015, transparent 50%);
+	}
+	.red:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, red-rgb-015, transparent 50%);
+	}
+	
+	.yellow::before {
+		background-image: linear-gradient(
+			-80deg,
+			yellow-rgb-015,
+			transparent 50%
+		);
+	}
+	.yellow:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			yellow-rgb-015,
+			transparent 50%
+		    );
+	    }
+    }
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+
+.container.gallery-container {
+  background-color: transparent;
+  color: #35373a;
+}
+
+.gallery-container h1 {
+  margin-bottom: 4rem; /* Increases the bottom margin */
+  font-family: 'NovaFlat'; /* Changes the font family */
+  font-weight: bold; /* Makes the text bold */
+  font-size: 2.5rem; /* Increases the font size */
+  color: #be3144; /* Changes the text color to white */
+  background-color: rgba(0, 0, 0, 0.7); /* Adds a semi-transparent dark background */
+  padding: 10px; /* Adds padding inside the h2 element */
+  border-radius: 5px; /* Rounds the corners of the background */
+  display: inline-block; /* Wraps the background tightly around the text */
+}
+
+.gallery-container p.page-description {
+  text-align: center;
+  margin: 25px auto;
+  font-size: 18px;
+  color: #999;
+}
+
+.tz-gallery {
+  padding: 10px;
+}
+
+/* Override bootstrap column paddings */
+.tz-gallery .row > div {
+  padding: 2px;
+}
+
+.tz-gallery .lightbox img {
+  width: 100%;
+  border-radius: 0;
+  position: relative;
+}
+
+@media(max-width: 768px) {
+  body {
+      padding: 0;
+  }
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+#discography h2.text-center {
+  margin-bottom: 4rem; /* Increases the bottom margin */
+  font-family: 'NovaFlat'; /* Changes the font family */
+  font-weight: bold; /* Makes the text bold */
+  font-size: 2.5rem; /* Increases the font size */
+  color: #be3144; /* Changes the text color to white */
+  background-color: rgba(0, 0, 0, 0.7); /* Adds a semi-transparent dark background */
+  padding: 10px; /* Adds padding inside the h2 element */
+  border-radius: 5px; /* Rounds the corners of the background */
+  display: inline-block; /* Wraps the background tightly around the text */
+}
+
+
+#discography .carousel-caption {
+  /* Position the caption at the bottom of the carousel */
+  bottom: 0; /* Adjust as needed for spacing from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+
+  /* Create a semi-transparent overlay for the text background */
+  background: rgb(0, 0, 0); /* Adjust color and opacity as needed */
+  padding: 30px 30px; /* Padding around text */
+  width: 100%; /* Adjust width as needed */
+  margin: 0; /* Reset any default margins */
+  position: absolute;
+}
+
+#discography .carousel-item {
+  text-align: center;
+  position: relative; /* Ensure the relative positioning for the absolute child */
+}
+
+#discography .carousel-caption h5 {
+  font-size: 1.5rem; /* Adjust as needed */
+  font-weight: bold;
+  color: #ffffff; /* Adjust text color as needed */
+}
+
+#discography .carousel-caption p {
+  font-size: 1rem; /* Adjust as needed */
+  color: #ffffff; /* Adjust text color as needed */
+}
+
+/* Ensure the indicators and controls are still clickable */
+.carousel-indicators li,
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 2;
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+#media h2.text-center {
+  margin-bottom: 4rem; /* Increases the bottom margin */
+  font-family: 'NovaFlat'; /* Changes the font family */
+  font-weight: bold; /* Makes the text bold */
+  font-size: 2.5rem; /* Increases the font size */
+  color: #be3144; /* Changes the text color to white */
+  background-color: rgba(0, 0, 0, 0.7); /* Adds a semi-transparent dark background */
+  padding: 10px; /* Adds padding inside the h2 element */
+  border-radius: 5px; /* Rounds the corners of the background */
+  display: inline-block; /* Wraps the background tightly around the text */
+}
+
+
+#media {
+  padding: 60px 0;
+}
+
+.video-card {
+  background-color: #2a2a2a; /* Card background color */
+  padding: 15px;
+  border-radius: 10px; /* Rounded corners for the card */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  text-align: center; /* Center the content */
+}
+
+.video-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Larger shadow on hover */
+}
+
+.video-thumbnail {
+  margin-bottom: 15px; /* Space between thumbnail and title */
+}
+
+.video-title {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 10px; /* Space between title and button */
+}
+
+.video-btn {
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #007bff; /* Bootstrap primary button color */
+  text-decoration: none; /* Remove underline from links */
+  display: inline-block; /* Needed for the padding and margin */
+  padding: 10px 20px; /* Button padding */
+  border-radius: 5px; /* Button rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.video-btn:hover {
+  background-color: #0056b3; /* Darken button color on hover */
+}
+
